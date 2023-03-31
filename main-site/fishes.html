@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fishes page</title>
+    <link href="./fontawesome/css/all.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bot.css" />
+    <style></style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="./index.html">Магазин животных</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Главная страница</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./parrots.html">Птицы</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./snakes.html">Рептилии</a>
+          </li>
+          <li class="nav-item disabled">
+            <a class="nav-link" href="#">Рыбы(вы сейчас тут)</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./accessories.html">Аксессуары</a>
+          </li>
+        </ul>
+        <i class="fa-solid fa-basket-shopping" style="color: rgb(255, 255, 255)"
+          ><button
+            id="checkout"
+            style="color: rgb(255, 255, 255); border: none; background: none"
+          >
+            Корзина
+          </button></i
+        >
+        <br />
+        <button
+          id="clear_cart"
+          style="border-radius: 15%; background-color: #27ff32; border: none"
+        >
+          Очистить корзину
+        </button>
+        <div
+          class="text-center"
+          style="color: rgb(255, 255, 255); margin-left: 10px"
+          id="hello"
+        ></div>
+        <!-- <form class="form-inline mt-2 mt-md-0">
+            <input
+              class="form-control mr-sm-2"
+              type="text"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form> -->
+      </div>
+    </nav>
+    <div id="load"></div>
+
+    <div style="margin-top: 50px" id="cart_content"></div>
+    <div id="totalPrice"></div>
+    <div id="top"></div>
+    <div id="contents" style="margin-top: 50px; margin-bottom: 20px">
+      <h1 class="text-center" style="color: rgb(255, 255, 255)">
+        На этой странице вы сможете преобрести себе красивую яркую рыбку(или
+        даже несколько)
+      </h1>
+      <div
+        id="petushok"
+        class="item_box"
+        style="max-width: 1140px; margin-bottom: 30px"
+      >
+        <img
+          src="./images/petushok.jpg"
+          style="
+            width: 200px;
+            height: auto;
+            float: left;
+            margin-left: 73px;
+            margin-right: 20px;
+          "
+          alt=""
+        />
+        <h3 style="color: rgb(172, 255, 186)">
+          Это <span class="item_title">петушок</span>
+        </h3>
+        <p
+          id="description"
+          style="color: rgb(255, 255, 255); margin-left: 73px"
+        >
+          Петушков можно встретить в аквариумах любителей по всему миру. Эта
+          великолепная рыбка способна выжить без подачи кислорода, так как имеет
+          специальный орган дыхания – лабиринт, позволяющий ей использовать для
+          дыхания атмосферный воздух. Среди интересных особенностей петушков
+          можно выделить усиленную агрессию самцов друг к другу. Встреча двух
+          взрослых представителей данного вида непременно закончится дракой.
+          Поэтому содержать вместе 2 и более мужских особей не рекомендуется.
+          Размножаются рыбки довольно просто: самцы строят особое гнездо из
+          пузырьков, куда складывают икринки и заботятся о них, пока не появятся
+          мальки.
+        </p>
+        <p style="margin-left: 76px">
+          Цена: <span class="item_price">3</span>$
+        </p>
+        <button
+          class="add_item"
+          data-id="9"
+          style="
+            border-radius: 15%;
+            background-color: #27ff32;
+            border: none;
+            margin-left: 73px;
+          "
+        >
+          Купить
+        </button>
+        <br />
+      </div>
+      <div
+        id="barbus"
+        class="item_box"
+        style="max-width: 1140px; margin-left: 73px"
+      >
+        <img
+          src="./images/barbus.jpg"
+          style="
+            width: 200px;
+            height: auto;
+            float: right;
+            margin-left: 20px;
+            margin-right: 70px;
+          "
+          alt=""
+        />
+        <h3 style="color: rgb(172, 255, 186); text-align: right">
+          Это <span class="item_title">барбус</span>
+        </h3>
+        <p
+          id="description"
+          style="color: rgb(255, 255, 255); margin-right: 73px"
+        >
+          Барбусы – широкая группа рыб, среди которых встречаются и миниатюрные
+          рыбки, и настоящие гиганты. Объединяет их стайный образ жизни и
+          постоянная «суетливость». Порой создается впечатление, что игры друг с
+          другом прекращаются только с выключением света в аквариуме. Барбусы
+          неприхотливы в содержании и при желании легко размножаются в домашних
+          условиях. Следует отметить, что некоторые представители этой группы
+          своей избыточной активностью могут стать источником стресса для более
+          медлительных рыб. Поэтому вопросу совместимости следует уделить особое
+          внимание, если вы планируете содержать барбусов в общем аквариуме.
+        </p>
+        <p>Цена: <span class="item_price">2</span>$</p>
+        <button
+          class="add_item"
+          data-id="10"
+          style="border-radius: 15%; background-color: #27ff32; border: none"
+        >
+          Купить
+        </button>
+        <br />
+      </div>
+      <div
+        id="guppi"
+        class="item_box"
+        style="max-width: 1140px; margin-top: 30px"
+      >
+        <img
+          src="./images/guppi.jpg"
+          style="
+            width: 200px;
+            height: auto;
+            float: left;
+            margin-left: 73px;
+            margin-right: 20px;
+          "
+          alt=""
+        />
+        <h3 style="color: rgb(172, 255, 186)">
+          Это <span class="item_title">гуппи</span>
+        </h3>
+        <p
+          id="description"
+          style="color: rgb(255, 255, 255); margin-left: 73px"
+        >
+          Гуппи, без сомнения, лучшая рыбка для начинающих аквариумистов. Она
+          неприхотлива в уходе, о ее выносливости даже ходят легенды, не требует
+          больших объемов аквариума, хорошо уживается со многими декоративными
+          видами. Добавьте к этому огромное цветовое разнообразие и
+          живорождение, благодаря которому получить потомство гуппи в домашних
+          условиях проще простого. Гуппи очень широко распространены по всему
+          миру. Общее количество их настолько велико, что данному виду даже
+          присвоили титул «рыбка тысячелетия». Также гуппи оказали неоценимую
+          помощь человечеству в борьбе с распространением малярии в тропических
+          регионах планеты, ведь личинки комаров – излюбленная пища этих
+          маленьких живородок.
+        </p>
+        <p style="margin-left: 76px">
+          Цена: <span class="item_price">2</span>$
+        </p>
+        <button
+          class="add_item"
+          data-id="11"
+          style="
+            border-radius: 15%;
+            background-color: #27ff32;
+            border: none;
+            margin-left: 73px;
+          "
+        >
+          Купить
+        </button>
+        <br />
+      </div>
+      <div
+        id="popugai"
+        class="item_box"
+        style="max-width: 1140px; margin-left: 73px"
+      >
+        <img
+          src="./images//ryba-popugaj.jpg"
+          style="
+            width: 200px;
+            height: auto;
+            float: right;
+            margin-left: 20px;
+            margin-right: 70px;
+          "
+          alt=""
+        />
+        <h3 style="color: rgb(172, 255, 186); text-align: right">
+          Это <span class="item_title">рыба-попугай</span>
+        </h3>
+        <p
+          id="description"
+          style="color: rgb(255, 255, 255); margin-right: 73px"
+        >
+          Встретить рыбу попугая в природе у вас не получится. Этот гибрид был
+          выведен путем скрещивания нескольких видов американских цихлид, а вот
+          каких – до сих пор является коммерческой тайной. Рыбки имеют забавное
+          укороченное бочкообразное тело и рот с характерной улыбкой. Сжатие
+          внутренних органов привело к тому, что попугаи плавают слегка
+          неуклюже. Но несмотря на все это, рыбки попугаи имеют свою армию
+          поклонников. Самым распространенным окрасом попугаев является красный,
+          но в продаже можно встретить и желтых, и синих, и зеленых особей.
+          Стоит помнить, что предки рыбок попугаев – цихлиды, от которых
+          представители данной группы получили свою территориальность, поэтому
+          совмещать их можно только с соразмерными соседями. Попугаи могут
+          откладывать икру, но она является бесплодной, и получить из нее
+          потомство не выйдет.
+        </p>
+        <p>Цена: <span class="item_price">20</span>$</p>
+        <button
+          class="add_item"
+          data-id="12"
+          style="border-radius: 15%; background-color: #27ff32; border: none"
+        >
+          Купить
+        </button>
+        <br />
+      </div>
+      <div
+        id="astronotus"
+        class="item_box"
+        style="max-width: 1140px; margin-top: 30px"
+      >
+        <img
+          src="./images/astronotus.jpg"
+          style="
+            width: 200px;
+            height: auto;
+            float: left;
+            margin-left: 73px;
+            margin-right: 20px;
+          "
+          alt=""
+        />
+        <h3 style="color: rgb(172, 255, 186)">
+          Это <span class="item_title">астронотус</span>
+        </h3>
+        <p
+          id="description"
+          style="color: rgb(255, 255, 255); margin-left: 70px"
+        >
+          Если вы желаете завести в своем аквариуме рыбку, которая будет
+          узнавать вас при встрече, то обязательно рассмотрите кандидатуру
+          астронотуса. Эти крупные цихлиды отличаются недюжинным интеллектом,
+          запоминают лицо своего хозяина и даже иногда дают себя погладить.
+          Главная трудность в содержании – немалый размер рыбок. В аквариуме они
+          способны вырасти до 25-30 см в длину, а значит на пару рыб понадобится
+          не менее 200 литров воды. К сожалению, уживаются с другими видами они
+          не всегда хорошо, только с соразмерными цихлидами, и даже в этом
+          случае подобное соседство требует наблюдения за поведением рыбок.
+        </p>
+        <br />
+        <p style="margin-left: 76px">
+          Цена: <span class="item_price">3</span>$
+        </p>
+        <button
+          class="add_item"
+          data-id="13"
+          style="
+            border-radius: 15%;
+            background-color: #27ff32;
+            border: none;
+            margin-left: 76px;
+          "
+        >
+          Купить
+        </button>
+      </div>
+      <div
+        id="kloun"
+        class="item_box"
+        style="max-width: 1140px; margin-left: 73px"
+      >
+        <img
+          src="./images/kloun.jpg"
+          style="
+            width: 200px;
+            height: auto;
+            float: right;
+            margin-left: 20px;
+            margin-right: 70px;
+          "
+          alt=""
+        />
+        <h3 style="color: rgb(172, 255, 186); text-align: right">
+          Это <span class="item_title">рыба-клоун</span>
+        </h3>
+        <p
+          id="description"
+          style="color: rgb(255, 255, 255); margin-right: 73px"
+        >
+          Рыбы-клоуны, или амфиприоны – это морские рыбы, которые часто
+          становятся первыми жителями начинающих морских аквариумистов. Они
+          обладают яркой, запоминающейся внешностью. Это рыбки с
+          насыщенно-оранжевой или красной окраской и характерными белыми
+          полосами на теле. Очень интересен союз этих морских обитателей и
+          различных видов актиний. Яд последних не действует на клоунов, поэтому
+          они спокойно живут и размножаются среди щупалец. А вот желающему
+          полакомиться амфиприоном придется несладко, актинии нанесут ему
+          серьезные ожоги своими стрекательными клетками. Со своей стороны
+          клоуны очищают щупальца кишечнополостных от остатков пищи, вентилируют
+          пространство между ними. Для пары клоунов понадобится аквариум от 50
+          литров. С другими морскими обитателями уживаются хорошо.
+        </p>
+        <p>Цена: <span class="item_price">2</span>$</p>
+        <button
+          class="add_item"
+          data-id="14"
+          style="border-radius: 15%; background-color: #27ff32; border: none"
+        >
+          Купить
+        </button>
+        <br />
+      </div>
+    </div>
+
+    <div
+      class="container-fluid footer"
+      style="
+        color: rgb(255, 255, 255);
+        background-color: rgb(30, 156, 57);
+        max-width: 1140px;
+        margin-top: 50px;
+      "
+    >
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <h3>GAG_zoo</h3>
+
+          <h4>2023</h4>
+        </div>
+      </div>
+    </div>
+
+    <a
+      href="#top"
+      title="To Top"
+      id="totop"
+      class="text-center flex-column d-flex justify-content-center"
+    >
+      <i class="fa-solid fa-angle-up"></i>
+    </a>
+
+    <div id="chatbot">
+      <form action="" id="form_chatbot">
+        <div id="answers"></div>
+        <input type="text" id="question" />
+        <input type="button" value="Send" id="ok" />
+      </form>
+    </div>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/bot.js"></script>
+    <script src="./scripts/cart.js"></script>
+  </body>
+</html>

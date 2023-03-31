@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turtles page</title>
+    <link href="./fontawesome/css/all.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bot.css" />
+    <style></style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="./index.html">Магазин животных</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Главная страница</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./parrots.html">Птицы</a>
+          </li>
+          <li class="nav-item disabled">
+            <a class="nav-link" href="#">Рептилии(вы сейчас тут)</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./fishes.html">Рыбы</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./accessories.html">Аксессуары</a>
+          </li>
+        </ul>
+        <i class="fa-solid fa-basket-shopping" style="color: rgb(255, 255, 255)"
+          ><button
+            id="checkout"
+            style="color: rgb(255, 255, 255); border: none; background: none"
+          >
+            Корзина
+          </button></i
+        >
+        <br />
+        <button
+          id="clear_cart"
+          style="border-radius: 15%; background-color: #27ff32; border: none"
+        >
+          Очистить корзину
+        </button>
+        <div
+          class="text-center"
+          style="color: rgb(255, 255, 255); margin-left: 10px"
+          id="hello"
+        ></div>
+        <!-- <form class="form-inline mt-2 mt-md-0">
+            <input
+              class="form-control mr-sm-2"
+              type="text"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form> -->
+      </div>
+    </nav>
+    <div id="load"></div>
+
+    <div id="top"></div>
+    <div style="margin-top: 50px" id="cart_content"></div>
+    <div id="totalPrice"></div>
+    <div id="contents" style="margin-top: 50px; margin-bottom: 20px">
+      <h1 class="text-center" style="color: rgb(255, 255, 255)">
+        На этой странице вы сможете преобрести себе необычного питомца(например,
+        черепаху или змею)
+      </h1>
+      <div
+        id="steppe"
+        class="item_box"
+        style="max-width: 1140px; margin-bottom: 30px"
+      >
+        <img
+          src="./images/steppe-turtle.jpg"
+          style="
+            width: 200px;
+            height: auto;
+            float: left;
+            margin-left: 73px;
+            margin-right: 20px;
+          "
+          alt=""
+        />
+        <h3 style="color: rgb(172, 255, 186)">
+          Это
+          <span class="item_title">степная(или среднеазиатская) черепаха</span>
+        </h3>
+        <p id="description" style="color: rgb(255, 255, 255)">
+          Небольшая(не больше 20-ти см) черепаха с невысоким, округлым панцерем
+          желтовато-бурого цвета. Самки этого вида обычно заметно крупнее
+          самцов. Живут 10-30 лет. Этот вид несколько проще в уходе, чем
+          аквариумные виды, однако для комфортной жизни такой черепахе нужен
+          хорошо оборудованный террариум.
+        </p>
+        <p>Цена: <span class="item_price">125</span>$</p>
+        <button
+          class="add_item"
+          data-id="5"
+          style="
+            border-radius: 15%;
+            background-color: #27ff32;
+            border: none;
+            margin-left: 76px;
+          "
+        >
+          Купить
+        </button>
+        <br />
+      </div>
+      <div
+        id="star"
+        class="item_box"
+        style="max-width: 1140px; margin-left: 73px"
+      >
+        <img
+          src="./images/star-turtle.jpg"
+          style="
+            width: 200px;
+            height: auto;
+            float: right;
+            margin-left: 20px;
+            margin-right: 70px;
+          "
+          alt=""
+        />
+        <h3 style="color: rgb(172, 255, 186); text-align: right">
+          Это <span class="item_title">звёздчатая сухопутная черепаха</span>
+        </h3>
+        <p id="description" style="color: rgb(255, 255, 255)">
+          Вид черепах средних размеров(самки - 25см, самцы - 15). Имеет очень
+          красивый выпуклый панцирь, из-за чего пользуется большой популярностью
+          среди желающих завести себе необычного питомца. Так же панцирь имеет
+          очень красивый узор на щитках(из-за него она и получила свое
+          название). Но выпуклые они только у самцов. Активна по утрам и
+          вечерам, в неволе живет около 60-ти лет.
+        </p>
+        <p>Цена: <span class="item_price">130</span>$</p>
+        <button
+          class="add_item"
+          data-id="6"
+          style="border-radius: 15%; background-color: #27ff32; border: none"
+        >
+          Купить
+        </button>
+        <br />
+      </div>
+      <div
+        id="snake1"
+        class="item_box"
+        style="max-width: 1140px; margin-top: 30px"
+      >
+        <img
+          src="./images/poloz.jpg"
+          style="
+            width: 200px;
+            height: auto;
+            float: left;
+            margin-left: 73px;
+            margin-right: 20px;
+          "
+          alt=""
+        />
+        <h3 style="color: rgb(172, 255, 186)">
+          Это <span class="item_title">маисовый полоз</span>
+        </h3>
+        <p id="description" style="color: rgb(255, 255, 255)">
+          Длина этой змеи может достигать 1,2 - 1,5 м. Окраска бывает очень
+          разнообразной. Естественная окраска оранжевая с чёрными полосами,
+          окружающими красные пятна. Брюхо имеет сетчатый бело-чёрный рисунок.
+          Самцы вырастают несколько меньше самок.
+        </p>
+        <br /> <br>
+        <p style="margin-left: 76px;">Цена: <span class="item_price">30</span>$</p>
+        <button
+          class="add_item"
+          data-id="7"
+          style="
+            border-radius: 15%;
+            background-color: #27ff32;
+            border: none;
+            margin-left: 73px;
+          "
+        >
+          Купить
+        </button>
+        <br />
+      </div>
+      <div
+        id="chameleon-stand"
+        class="item_box"
+        style="max-width: 1140px; margin-left: 73px; margin-top: 30px"
+      >
+        <img
+          src="./images/chameleon-stand.jpg"
+          style="
+            width: 200px;
+            height: auto;
+            float: right;
+            margin-left: 20px;
+            margin-right: 70px;
+          "
+          alt=""
+        />
+        <h3 style="color: rgb(172, 255, 186); text-align: right">
+          Это <span class="item_title">хамелеон обыкновенный</span>
+        </h3>
+        <p id="description" style="color: rgb(255, 255, 255)">
+          Небольшая рептилия длинной до 30 см. Окраска может очень сильно
+          варьировать(от однотонной до пятнистой), цвета бывают как и
+          яркими(например, желтоватый), так и более темные(например,
+          темно-зеленый.).
+        </p>
+        <p>Цена: <span class="item_price">30</span>$</p>
+        <button
+          class="add_item"
+          data-id="8"
+          style="border-radius: 15%; background-color: #27ff32; border: none"
+        >
+          Купить
+        </button>
+        <br />
+      </div>
+      <div
+        id="chameleon-imenski"
+        class="item_box"
+        style="max-width: 1140px; margin-top: 30px"
+      >
+        <img
+          src="./images/imenski-chameleon.webp"
+          style="
+            width: 200px;
+            height: auto;
+            float: left;
+            margin-left: 73px;
+            margin-right: 20px;
+          "
+          alt=""
+        />
+        <h3 style="color: rgb(172, 255, 186)">
+          Это <span class="item_title">йеменский хамелеон</span>
+        </h3>
+        <p
+          id="description"
+          style="color: rgb(255, 255, 255); margin-left: 70px"
+        >
+          Один из крупнейших представителей своего семейства. Длина тела
+          составляет 60 см. Наблюдается половой диморфизм — самцы крупнее самок.
+          Самцы окрашены более пёстро: на зелёном фоне по бокам ярко выделяются
+          три жёлтых пятна, окаймлённые оранжевыми и коричневыми поперечными
+          полосами. Голова украшена высоким развитым гребнем, достигающим 7—8 см
+          (у самок он лишь обозначен). Жёсткий хвост до самого кончика покрыт
+          зелёными и жёлто-коричневыми полосами, которые расположены поочерёдно.
+        </p>
+        <p style="margin-left: 76px">
+          Цена: <span class="item_price">45</span>$
+        </p>
+        <button
+          class="add_item"
+          data-id="9"
+          style="
+            border-radius: 15%;
+            background-color: #27ff32;
+            border: none;
+            margin-left: 73px;
+          "
+        >
+          Купить
+        </button>
+        <br />
+      </div>
+    </div>
+
+    <div
+      class="container-fluid footer"
+      style="
+        color: rgb(255, 255, 255);
+        background-color: rgb(30, 156, 57);
+        max-width: 1140px;
+        margin-top: 100px;
+      "
+    >
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <h3>GAG_zoo</h3>
+
+          <h4>2023</h4>
+        </div>
+      </div>
+    </div>
+
+    <a
+      href="#top"
+      title="To Top"
+      id="totop"
+      class="text-center flex-column d-flex justify-content-center"
+    >
+      <i class="fa-solid fa-angle-up"></i>
+    </a>
+
+    <div id="chatbot">
+      <form action="" id="form_chatbot">
+        <div id="answers"></div>
+        <input type="text" id="question" />
+        <input type="button" value="Send" id="ok" />
+      </form>
+    </div>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/bot.js"></script>
+    <script src="./scripts/cart.js"></script>
+  </body>
+</html>

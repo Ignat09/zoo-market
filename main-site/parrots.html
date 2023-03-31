@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parrots page</title>
+    <link href="./fontawesome/css/all.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bot.css" />
+    <style></style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="./index.html">Магазин животных</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Главная страница</a>
+          </li>
+          <li class="nav-item disabled">
+            <a class="nav-link" href="#">Птицы(вы сейчас тут)</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./snakes.html">Рептилии</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./fishes.html">Рыбы</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./accessories.html">Аксессуары</a>
+          </li>
+        </ul>
+        <i class="fa-solid fa-basket-shopping" style="color: rgb(255, 255, 255)"
+          ><button
+            id="checkout"
+            style="color: rgb(255, 255, 255); border: none; background: none"
+          >
+            Корзина
+          </button></i
+        >
+        <br />
+        <button
+          id="clear_cart"
+          style="border-radius: 15%; background-color: #27ff32; border: none"
+        >
+          Очистить корзину
+        </button>
+        <div
+          class="text-center"
+          style="color: rgb(255, 255, 255); margin-left: 10px"
+          id="hello"
+        ></div>
+        <!-- <form class="form-inline mt-2 mt-md-0">
+            <input
+              class="form-control mr-sm-2"
+              type="text"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form> -->
+      </div>
+    </nav>
+    <div id="load"></div>
+    <div style="margin-top: 50px" id="cart_content"></div>
+    <div id="totalPrice"></div>
+    <div id="top"></div>
+    <div id="contents" style="margin-top: 50px; margin-bottom: 20px">
+      <h1 class="text-center" style="color: rgb(255, 255, 255)">
+        На этой странице вы сможете преобрести себе пернатого друга
+      </h1>
+      <div
+        class="item_box"
+        id="ara"
+        style="max-width: 1140px; margin-bottom: 30px"
+      >
+        <img
+          src="./images/ara.jpg"
+          style="
+            width: 200px;
+            height: auto;
+            float: left;
+            margin-left: 73px;
+            margin-right: 20px;
+          "
+          alt=""
+        />
+        <h3 style="color: rgb(172, 255, 186)">
+          Это <span class="item_title">геоцинтовый ара</span>
+        </h3>
+        <p id="description" style="color: rgb(255, 255, 255)">
+          Самый большой попугай на Земле длиной 1 м. у него яркое оперение
+          кобальтово-синего цвета и он может своим клювом ломать кокосовую
+          скорлупу. Так же это очень громкая птица с резким голосом, которую
+          слышно на больших расстояниях(1-1,5 км)
+          <a
+            style="color: #27ff32"
+            href="https://www.zootovary.com/popugai-ara-osobennosti-soderjaniya-uhoda-kormleniya-a-1015.html"
+            >Посмотреть ососбенности ухода, содержания и кормления</a
+          >
+        </p> <br>
+        <p style="margin-left: 76px;">Цена: <span class="item_price">6815</span>$</p>
+        <button
+          class="add_item"
+          data-id="1"
+          style="border-radius: 15%; background-color: #27ff32; border: none; margin-left: 76px;"
+        >
+          Купить
+        </button>
+        <br />
+      </div>
+      <div
+        id="corella"
+        class="item_box"
+        style="max-width: 1140px; margin-left: 73px"
+      >
+        <img
+          src="./images/corella.jpg"
+          style="
+            width: 200px;
+            height: auto;
+            float: right;
+            margin-left: 20px;
+            margin-right: 70px;
+          "
+          alt=""
+        />
+        <h3 style="color: rgb(172, 255, 186); text-align: right">
+          Это <span class="item_title">попугай корелла </span>
+        </h3>
+        <p id="description" style="color: rgb(255, 255, 255)">
+          Небольшие(всего около 30-40 см с хвостом(сам хвост не больше 16-ти))
+          птицы с харрактернымы высоким хохолком на голове и длинным заостренным
+          хвостом. Окраска у самцов и у самок разная, у самцов она более яркая.
+          Оперение у самцов тёмно-оливково-серое, хохолок и голова жёлтые.
+          Маховые и рулевые перья бархатно-чёрные, с синевато-серым оттенком.
+          Щёки, передняя часть головы и хохол сернисто-жёлтые, на щеках имеются
+          оранжево-красные пятна. Клюв похож на клюв какаду, но значительно
+          короче. А самки грязно-серого цвета, нижняя сторона тела с буроватым
+          оттенком, на щеках оранжевые пятна. Голова и хохолок у них
+          бледно-серые с желтоватым оттенком. На внутренних опахалах маховых и
+          рулевых перьев расположены овальные пятна бледно-жёлтого цвета, по
+          внешним краям наружных рулевых перьев имеются жёлтые полосы с нижней
+          стороны. Так же есть множество вариаций окрасок. Подробнее о виде
+          можно посмотреть
+          <a
+            style="color: #27ff32"
+            href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B5%D0%BB%D0%BB%D0%B0"
+            >тут</a
+          >
+        </p>
+        <p>Цена: <span class="item_price">20</span>$</p>
+        <button
+          class="add_item"
+          data-id="2"
+          style="border-radius: 15%; background-color: #27ff32; border: none"
+        >
+          Купить
+        </button>
+        <br />
+      </div>
+      <div
+        id="amazon"
+        class="item_box"
+        style="max-width: 1140px; margin-top: 30px"
+      >
+        <img
+          id="change"
+          src=""
+          style="
+            width: 200px;
+            height: auto;
+            float: left;
+            margin-left: 73px;
+            margin-right: 20px;
+          "
+          alt=""
+        />
+        <h3 style="color: rgb(172, 255, 186)">
+          Это <span class="item_title"> попугай амазон</span>
+        </h3>
+        <p id="description" style="color: rgb(255, 255, 255)">
+          Довольно крупные(25-45 см с хвостом) птицы с крепким телосложением.
+          Окраска в основном зеленая, у одних видов имеются красные пятна на
+          голове и хвосте, у других есть красное «зеркальце» на крыле.
+          Характерной особенностью этих попугаев является сильный клюв умеренной
+          длины и округлой формы и надклювье, образующее к основанию острое
+          ребро. Крылья средней длины, до конца хвоста не доходят.
+        </p>
+        <p style="margin-left: 76px;">Цена: <span class="item_price">540</span>$</p>
+        <button
+          class="add_item"
+          data-id="3"
+          style="
+            border-radius: 15%;
+            background-color: #27ff32;
+            border: none;
+            margin-left: 73px;
+          "
+        >
+          Купить
+        </button>
+        <br />
+      </div>
+      <div
+        id="ozerelovi"
+        class="item_box"
+        style="max-width: 1140px; margin-left: 73px"
+      >
+        <img
+          id="change1"
+          src=""
+          style="
+            width: 200px;
+            height: auto;
+            float: right;
+            margin-left: 20px;
+            margin-right: 70px;
+          "
+          alt=""
+        />
+        <h3 style="color: rgb(172, 255, 186); text-align: right">
+          Это <span class="item_title"> индийский кольчатый попугай</span>(еще
+          называют ожереловый попугай Крамера)
+        </h3>
+        <p id="description" style="color: rgb(255, 255, 255)">
+          Сравнительно небольшая(общая длина с хвостом 40-42 см, крылья около 16
+          см), но стройная птица. Хвост составляет около половины длины(примерно
+          20см). Окрас птицы обычно зеленый, почти такого же оттенка, как и
+          листья деревьев, но затылок синеватый, на горле есть черные перья, от
+          глаза к клюву тоже идет тонкая черная линия. На шее есть розовая
+          линия, образующая полукруг. Клюв ярко-красный, но кончик почти черный.
+          Нижняя часть крыльев темно-серая, но это можно заметить только когда
+          птица летит(или потягивается). Нижняя часть хвоста -
+          оливково-желтоватая.
+        </p>
+        <p>Цена: <span class="item_price">120</span>$</p>
+        <button
+          class="add_item"
+          data-id="4"
+          style="border-radius: 15%; background-color: #27ff32; border: none"
+        >
+          Купить
+        </button>
+        <br />
+      </div>
+    </div>
+
+    <div
+      class="container-fluid footer"
+      style="
+        color: rgb(255, 255, 255);
+        background-color: rgb(30, 156, 57);
+        max-width: 1140px;
+        margin-top: 100px;
+      "
+    >
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <h3>GAG_zoo</h3>
+
+          <h4>2023</h4>
+        </div>
+      </div>
+    </div>
+
+    <a
+      href="#top"
+      title="To Top"
+      id="totop"
+      class="text-center flex-column d-flex justify-content-center"
+    >
+      <i class="fa-solid fa-angle-up"></i>
+    </a>
+
+    <div id="chatbot">
+      <form action="" id="form_chatbot">
+        <div id="answers"></div>
+        <input type="text" id="question" />
+        <input type="button" value="Send" id="ok" />
+      </form>
+    </div>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/bot.js"></script>
+    <script src="./scripts/cart.js"></script>
+  </body>
+</html>

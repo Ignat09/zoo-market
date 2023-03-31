@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bonus game page</title>
+    <style>
+      #win {
+        position: absolute;
+        color: green;
+        transition: all 2s;
+        font-size: 70px;
+        margin-left: 40%;
+      }
+
+      .up {
+        transform: translateY(-500px);
+      }
+
+      .card {
+        background-color: #6d695c;
+        background-image: repeating-linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px,
+            transparent 60px
+          ),
+          repeating-linear-gradient(
+            60deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px,
+            transparent 60px
+          ),
+          linear-gradient(
+            60deg,
+            rgba(0, 0, 0, 0.1) 25%,
+            transparent 25%,
+            transparent 75%,
+            rgba(0, 0, 0, 0.1) 75%,
+            rgba(0, 0, 0, 0.1)
+          ),
+          linear-gradient(
+            120deg,
+            rgba(0, 0, 0, 0.1) 25%,
+            transparent 25%,
+            transparent 75%,
+            rgba(0, 0, 0, 0.1) 75%,
+            rgba(0, 0, 0, 0.1)
+          );
+        background-size: 70px 120px;
+        display: inline-block;
+        width: 80px;
+        height: 120px;
+        /* padding: 20px; */
+        margin: 10px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 40px;
+        color: rgb(16, 3, 194);
+      }
+
+      #real_cards,
+      #played_cards {
+        /* border: 1px solid red; */
+        min-height: 250px;
+      }
+
+      #table {
+        background-image: url(./images/table.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .effect {
+        /* height: 0; */
+        opacity: 0;
+        transition: all 3s;
+        transform: translateY(100%);
+      }
+      .rotate {
+        transform: rotate(3600deg);
+        transition: all 3s ease;
+        opacity: 0;
+      }
+      .red {
+        color: red !important;
+      }
+      #cards {
+        visibility: hidden;
+      }
+      #played_cards .card {
+        background-image: none;
+        background-color: #79766c;
+        color: rgb(238, 215, 83);
+        box-sizing: border-box;
+        padding-top: 35px;
+        border-style: double;
+        border-width: 5px;
+        border-color: rgb(70, 66, 66);
+        /* border: black;
+       border-width: 20px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info"></div>
+    <!-- <input type="number" name="" id="card" min="0" max="13" />
+    <button id="set_card">Set Card</button> -->
+    <button id="reload">Перезапустить</button>
+    <div id="cards"></div>
+    <div id="table">
+      <div id="real_cards"></div>
+      <div id="played_cards"></div>
+    </div>
+    <div id="win"></div>
+    <script src="./scripts/game.js"></script>
+  </body>
+</html>

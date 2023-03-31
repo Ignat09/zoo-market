@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessories page</title>
+    <link href="./fontawesome/css/all.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bot.css" />
+    <style></style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="./index.html">Магазин животных</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Главная страница</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./parrots.html">Птицы</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./snakes.html">Рептилии</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./accessories.html">Рыбы</a>
+          </li>
+          <li class="nav-item disabled">
+            <a class="nav-link" href="#">Аксессуары(вы сейчас тут)</a>
+          </li>
+        </ul>
+        <i class="fa-solid fa-basket-shopping" style="color: rgb(255, 255, 255)"
+          ><button
+            id="checkout"
+            style="color: rgb(255, 255, 255); border: none; background: none"
+          >
+            Корзина
+          </button></i
+        >
+        <br />
+        <button
+          id="clear_cart"
+          style="border-radius: 15%; background-color: #27ff32; border: none"
+        >
+          Очистить корзину
+        </button>
+        <div
+          class="text-center"
+          style="color: rgb(255, 255, 255); margin-left: 10px"
+          id="hello"
+        ></div>
+        <!-- <form class="form-inline mt-2 mt-md-0">
+            <input
+              class="form-control mr-sm-2"
+              type="text"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form> -->
+      </div>
+    </nav>
+    <div id="load"></div>
+    <div style="margin-top: 50px" id="cart_content"></div>
+    <div id="totalPrice"></div>
+
+    <div id="top"></div>
+    <div id="contents" style="margin-top: 50px; margin-bottom: 20px">
+      <h1 class="text-center" style="color: rgb(255, 255, 255)">
+        На этой странице вы сможете преобрести раpличные аксессуары(аквариумы,
+        террариумы, клетки и т.д.) для ваших питомцев
+      </h1>
+      <main class="mb-4 mt-4">
+        <h2 class="text-center mb-5" style="color: rgb(255, 255, 255)">
+          Клетки
+        </h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4" style="height: 576px">
+                <img
+                  src="./images/capuchino.jpg"
+                  alt="headphones-01"
+                  class="card-img-top"
+                />
+                <div class="card-body item_box">
+                  <div class="card-title">
+                    <h5>
+                      <span class="item_title"
+                        >Клетка для волнистых попугаев "КАПУЧИНО"</span
+                      >
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    Размеры: высота 49,5 см; длина: 23 см; ширина: 35см; <br />
+                    Материал: метал и пластик <br />
+                    Цена: <span class="item_price">11</span>$
+                  </p>
+                  <button
+                    href="#"
+                    class="btn btn-outline-success add_item"
+                    data-id="15"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4" style="height: 576px">
+                <img
+                  style="height: 348px; margin-bottom: 20px"
+                  src="./images/kletka.webp"
+                  alt="headphones-02"
+                  class="card-img-top"
+                />
+                <div class="card-body item_box">
+                  <div class="card-title">
+                    <h5><span class="item_title">Ferplast PIANO 6</span></h5>
+                  </div>
+                  <p class="card-text">
+                    Размеры: высота: 87 см; длина: 46,5 см; ширина: 70 см <br />
+                    Материал: метал, пластик; <br />
+                    Цена: <span class="item_price">130</span>$
+                  </p>
+                  <button
+                    href="#"
+                    class="btn btn-outline-success add_item"
+                    data-id="16"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4" style="height: 576px">
+                <img
+                  src="./images/kletka2.webp"
+                  alt="headphones-03"
+                  class="card-img-top"
+                  style="height: 300px"
+                />
+                <div class="card-body item_box">
+                  <div class="card-title">
+                    <h5>
+                      Большая
+                      <span class="item_title"
+                        >клетка-вольер для крупных попугаев Caesar в ретро
+                        стиле</span
+                      >
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    Размеры: высота: 178 см; длина: 102 см; ширина: 61 см <br />
+                    Материал: метал, пластик; <br />
+                    Цена: <span class="item_price">430</span>$
+                  </p>
+                  <button
+                    href="#"
+                    class="btn btn-outline-success add_item"
+                    data-id="17"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <main class="mb-4 mt-4">
+        <h2 class="text-center mb-5" style="color: rgb(255, 255, 255)">
+          Террариумы(все идут в комплекте с теми аксессуарами, которые есть на
+          фото(если вы хотите взять без них, то звоните в службу поддержки или
+          пишите на почту(и почту и номер можно узнать через бота, либо на
+          главной странице)))
+        </h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4" style="height: 576px">
+                <img
+                  src="./images/turtle-terrarium1.webp"
+                  alt="headphones-01"
+                  class="card-img-top"
+                  style="height: 300px"
+                />
+                <div class="card-body item_box">
+                  <div class="card-title">
+                    <h5>
+                      <span class="item_title"
+                        >Пластиковый аквариум для черепах TURTLE BOWL
+                        ARRICOT</span
+                      >
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    Размеры: высота 31 см; длина: 22 см; ширина: 7,5см; <br />
+                    Материал: прочный пластик <br />
+                    Островок по середине легко вынимается <br />
+                    Цена: <span class="item_price">6</span>$
+                  </p>
+                  <button
+                    href="#"
+                    class="btn btn-outline-success add_item"
+                    data-id="18"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4" style="height: 576px">
+                <img
+                  style="height: 318px; margin-bottom: 20px"
+                  src="./images/turtle-terrarium2.jpg"
+                  alt="headphones-02"
+                  class="card-img-top"
+                />
+                <div class="card-body item_box">
+                  <div class="card-title">
+                    <h5>
+                      <span class="item_title"
+                        >Акватеррариум для черепах HAITI</span
+                      >
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    Размеры: высота: 21,5 см; длина: 41,5 см; ширина: 16 см
+                    <br />
+                    Материал: стекло, пластик; <br />
+                    Цена: <span class="item_price">40</span>$
+                  </p>
+                  <button
+                    href="#"
+                    class="btn btn-outline-success add_item"
+                    data-id="19"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4" style="height: 576px">
+                <img
+                  src="./images/turtle-terrarium3.webp"
+                  alt="headphones-03"
+                  class="card-img-top"
+                />
+                <div class="card-body item_box">
+                  <div class="card-title">
+                    <h5>
+                      <span class="item_title"
+                        >Палюдариум для черепах Ferplast JAMAICA 80</span
+                      >
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    Размеры: высота: 81,5 см; длина: 36 см; ширина: 41 см <br />
+                    Материал: стекло, пластик; <br />
+                    Цена: <span class="item_price">175</span>$
+                  </p>
+                  <button
+                    href="#"
+                    class="btn btn-outline-success add_item"
+                    data-id="20"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4" style="height: 576px">
+                <img
+                  src="./images/snake-terrarium1.jpg"
+                  alt="headphones-01"
+                  class="card-img-top"
+                />
+                <div class="card-body item_box">
+                  <div class="card-title">
+                    <h5><span class="item_title">Террариум Repti-Zoo</span></h5>
+                  </div>
+                  <p class="card-text">
+                    Размеры: высота 60 см; длина: 45 см; ширина: 32см; <br />
+                    Материал: стекло, метал <br />
+                    Цена: <span class="item_price">190</span>$
+                  </p>
+                  <button
+                    href="#"
+                    class="btn btn-outline-success add_item"
+                    data-id="21"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4" style="height: 576px">
+                <img
+                  style="height: 300px; margin-bottom: 20px"
+                  src="./images/snake-terrarium2.jpg"
+                  alt="headphones-02"
+                  class="card-img-top"
+                />
+                <div class="card-body item_box">
+                  <div class="card-title">
+                    <h5>
+                      Террариум стеклянный для рептилий и амфибий
+                      <span class="item_title"
+                        >Hagen Exo Terra Natural Terrarium</span
+                      >
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    Размеры: высота: 90 см; длина: 45 см; ширина: 60 см
+                    <br />
+                    Материал: стекло, пластик; <br />
+                    Цена: <span class="item_price">480</span>$
+                  </p>
+                  <button
+                    href="#"
+                    class="btn btn-outline-success add_item"
+                    data-id="22"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4" style="height: 576px">
+                <img
+                  src="./images/snake-terrarium3.jpg"
+                  alt="headphones-03"
+                  class="card-img-top"
+                />
+                <div class="card-body item_box">
+                  <div class="card-title">
+                    <h5>
+                      <span class="item_title">Террариум куб Exo-Terra</span>
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    Размеры: высота: 60 см; длина: 45 см; ширина: 60 см <br />
+                    Материал: стекло, пластик; <br />
+                    Цена: <span class="item_price">100</span>$
+                  </p>
+                  <button
+                    href="#"
+                    class="btn btn-outline-success add_item"
+                    data-id="23"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <main class="mb-4 mt-4">
+        <h2 class="text-center mb-5" style="color: rgb(255, 255, 255)">
+          Аквариумы(все идут в комплекте с теми аксессуарами, которые есть на
+          фото(если вы хотите взять без них, то звоните в службу поддержки или
+          пишите на почту(и почту и номер можно узнать через бота, либо на
+          главной странице)))
+        </h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4" style="height: 576px">
+                <img
+                  style="height: 300px"
+                  src="./images/aquarium1.webp"
+                  alt="headphones-01"
+                  class="card-img-top"
+                />
+                <div class="card-body item_box">
+                  <div class="card-title">
+                    <h5>
+                      <span class="item_title"
+                        >Аквариум самоочищающийся My Fun Fish</span
+                      >
+                      маленький с крышкой
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    Размеры: высота 25 см; длина: 11 см; ширина: 11см; объем: 2л
+                    <br />
+                    Материал: ударопрочный пластик <br />
+                    Цена: <span class="item_price">7</span>$
+                  </p>
+                  <button
+                    href="#"
+                    class="btn btn-outline-success add_item"
+                    data-id="24"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4" style="height: 576px">
+                <img
+                  style="height: 318px; margin-bottom: 20px"
+                  src="./images/aquarium2.jpg"
+                  alt="headphones-02"
+                  class="card-img-top"
+                />
+                <div class="card-body item_box">
+                  <div class="card-title">
+                    <h5>
+                      <span class="item_title">
+                        EHEIM vivaline LED 180 Аквариум</span
+                      >
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    Размеры: высота: 45 см; длина: 120 см; ширина: 100 см;
+                    объем: 180л
+                    <br />
+                    Материал: стекло; <br />
+                    Цена: <span class="item_price">490</span>$
+                  </p>
+                  <button
+                    href="#"
+                    class="btn btn-outline-success add_item"
+                    data-id="25"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4" style="height: 576px">
+                <img
+                  src="./images/aquarium3.webp"
+                  alt="headphones-03"
+                  class="card-img-top"
+                />
+                <div class="card-body item_box">
+                  <div class="card-title">
+                    <h5><span class="item_title">Аквариум Куб</span></h5>
+                  </div>
+                  <p class="card-text">
+                    Размеры: высота: 35 см; длина: 30 см; ширина: 30 см; объем:
+                    31 л <br />
+                    Материал: стекло; <br />
+                    Цена: <span class="item_price">20</span>$
+                  </p>
+                  <button
+                    href="#"
+                    class="btn btn-outline-success add_item"
+                    data-id="26"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4" style="height: 576px">
+                <img
+                  src="./images/aquarium4.webp"
+                  alt="headphones-01"
+                  class="card-img-top"
+                />
+                <div class="card-body item_box">
+                  <div class="card-title">
+                    <h5>
+                      <span class="item_title">Аквариум Ferplast TANK</span>
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    Размеры: высота 30,5 см; длина: 52 см; ширина: 27 см; объем:
+                    21 л <br />
+                    Материал: стекло <br />
+                    Цена: <span class="item_price">40</span>$
+                  </p>
+                  <button
+                    href="#"
+                    class="btn btn-outline-success add_item"
+                    data-id="27"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4" style="height: 576px">
+                <img
+                  style="height: 300px; margin-bottom: 20px"
+                  src="./images/aquarium5.webp"
+                  alt="headphones-02"
+                  class="card-img-top"
+                />
+                <div class="card-body item_box">
+                  <div class="card-title">
+                    <h5>
+                      <span class="item_title"
+                        >Аквариум Juwel Rio коричневый</span
+                      >
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    Размеры: высота: 41 см; длина: 101 см; ширина: 50 см; объем:
+                    180 л
+                    <br />
+                    Материал: стекло, пластик; <br />
+                    Цена: <span class="item_price">360</span>$
+                  </p>
+                  <button
+                    href="#"
+                    class="btn btn-outline-success add_item"
+                    data-id="28"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4" style="height: 576px">
+                <img
+                  src="./images/aquarium6.jpg"
+                  alt="headphones-03"
+                  class="card-img-top"
+                  style="height: 300px"
+                />
+                <div class="card-body item_box">
+                  <div class="card-title" style="height: 76px">
+                    <h5>
+                      <span class="item_title"
+                        >Аквариум с крышкой и светом</span
+                      >
+                    </h5>
+                  </div>
+                  <p class="card-text" style="height: 100px">
+                    Размеры: высота: 35 см; длина: 43 см; ширина: 22 см; объем:
+                    33 л <br />
+                    Материал: стекло, пластик; <br />
+                    Цена: <span class="item_price">15</span>$
+                  </p>
+                  <button
+                    href="#"
+                    class="btn btn-outline-success add_item"
+                    data-id="29"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div
+      class="container-fluid footer"
+      style="
+        color: rgb(255, 255, 255);
+        background-color: rgb(30, 156, 57);
+        max-width: 1140px;
+        margin-top: 50px;
+      "
+    >
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <h3>GAG_zoo</h3>
+
+          <h4>2023</h4>
+        </div>
+      </div>
+    </div>
+
+    <a
+      href="#top"
+      title="To Top"
+      id="totop"
+      class="text-center flex-column d-flex justify-content-center"
+    >
+      <i class="fa-solid fa-angle-up"></i>
+    </a>
+
+    <div id="chatbot">
+      <form action="" id="form_chatbot">
+        <div id="answers"></div>
+        <input type="text" id="question" />
+        <input type="button" value="Send" id="ok" />
+      </form>
+    </div>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/bot.js"></script>
+    <script src="./scripts/cart.js"></script>
+  </body>
+</html>
